@@ -1,5 +1,7 @@
 :root {
     --primary-color: #3347B0;
+    --shadow: #3347B080;
+    --secundary-color: #FFFFFF;
 }
 
 * {
@@ -26,7 +28,7 @@
 .logo h2 {
     display: flex;
     flex-direction: column;
-    color: #FFFFFF;
+    color: var(--secundary-color);
     font-weight: 700;
     font-size: 24px;
 }
@@ -38,7 +40,141 @@
 }
 
 .logout span {
-    color: #FFFFFF;
+    color: var(--secundary-color);
     font-weight: 500;
     font-size: 36px;
+}
+
+.main {
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    padding: 0 90px;
+}
+
+.content-main {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+.section-left {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    gap: 40px;
+}
+
+.text {
+    display: flex;
+}
+
+.text h2 {
+    font-weight: 300;
+    font-size: 57.38px;
+    line-height: 1.1;
+}
+
+.textBlue {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.cursos {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.ds {
+    background-color: var(--primary-color);
+    height: 200px;
+    width: 400px;
+    border-radius: 4px;
+    box-shadow: 8px 8px 5px var(--shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.redes {
+    background-color: var(--primary-color);
+    height: 200px;
+    width: 400px;
+    border-radius: 4px;
+    box-shadow: 8px 8px 5px var(--shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.ds,
+.redes {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.ds:hover,
+.redes:hover {
+    transform: translateY(-6px);
+    box-shadow: 14px 14px 20px #3347B080;
+}
+
+
+.cursos h2 {
+    color: var(--secundary-color);
+    font-weight: 500;
+    font-size: 64px;
+}
+
+.footer {
+    background-color: var(--primary-color);
+    color: var(--secundary-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 60px;
+}
+
+.contatos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contatos div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.copyright {
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-media img {
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.social-media img:hover {
+    transform: scale(1.1);
 }
